@@ -47,4 +47,22 @@ public class TestMaximumTest {
         double vales = testMaximum.doubleMax(33.2,4.8,55.0);
         Assert.assertEquals(55.0, vales, 0);
     }
+
+    @Test
+    public void MaxAtFirstPlaceString() {
+        String vales = testMaximum.stringMax("Banana","Apple","Peach");
+        Assert.assertEquals("Peach", vales);
+    }
+
+    @Test
+    public void MaxAtSecondPlaceString() {
+        String vales = testMaximum.stringMax("Apple","Banana","Peach");
+        Assert.assertEquals("Peach", vales);
+    }
+
+    @Test
+    public void MaxAtThirdPlaceString() {
+        String vales = testMaximum.stringMax("Apple","Peach","Banana");
+        Assert.assertEquals("Peach", vales);
+    }
 }
