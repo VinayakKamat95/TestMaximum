@@ -29,4 +29,22 @@ public class TestMaximumTest {
         int vales = testMaximum.integerMax(33,4,55);
         Assert.assertEquals(55, vales);
     }
+
+    @Test
+    public void MaxAtFirstPlaceDouble() {
+        double vales = testMaximum.doubleMax(55.0,33.2,4.8);
+        Assert.assertEquals(55.0, vales, 0);
+    }
+
+    @Test
+    public void MaxAtSecondPlaceDouble() {
+        double vales = testMaximum.doubleMax(33.2,55.0,4.8);
+        Assert.assertEquals(55.0, vales, 0);
+    }
+
+    @Test
+    public void MaxAtThirdPlaceDouble() {
+        double vales = testMaximum.doubleMax(33.2,4.8,55.0);
+        Assert.assertEquals(55.0, vales, 0);
+    }
 }
