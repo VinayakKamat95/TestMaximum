@@ -1,5 +1,6 @@
 package com.bridgelabz;
 
+
 public class TestMaximum<T extends Comparable<T>>{
     T x,y,z;
 
@@ -14,14 +15,16 @@ public class TestMaximum<T extends Comparable<T>>{
     }
 
     /* Generic Method to Check Max Integer, Double, String*/
-    public static <T extends Comparable<T>> T maximum(T x, T y, T z) {
-        T max = x;
-        if(y.compareTo(max) > 0){
-            max = y;
-        }
-        if(z.compareTo(max) > 0){
-            max = z;
+    public static <T extends Comparable<T>> T maximum(T ...elements) {
+
+        T max = elements[0];
+        for (T element : elements) {
+            if (element.compareTo(max) > 0) {
+                max = element;
+            }
         }
         return max;
-    }
+        }
 }
+
+
