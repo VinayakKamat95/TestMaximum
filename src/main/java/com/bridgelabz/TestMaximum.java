@@ -23,8 +23,16 @@ public class TestMaximum<T extends Comparable<T>>{
                 max = element;
             }
         }
+        printMax(elements,max);
         return max;
         }
+
+    private static <T extends Comparable<T>> void printMax(T[] elements, T max) {
+        for (T element : elements) {
+            System.out.print(element+", ");
+        }
+        System.out.println(" Max is " + max);
+    }
 }
 
 
