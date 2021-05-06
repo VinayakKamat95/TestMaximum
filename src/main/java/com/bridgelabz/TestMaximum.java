@@ -27,7 +27,8 @@ public class TestMaximum<T extends Comparable<T>>{
         return max;
         }
 
-    private static <T extends Comparable<T>> void printMax(T[] elements, T max) {
+    /* Generic Method to Print all Elements and Maximum Value out of all elements*/
+    private static <T>void printMax(T[] elements, T max) {
         for (T element : elements) {
             System.out.print(element+", ");
         }
